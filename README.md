@@ -3,6 +3,8 @@
 
 This is a Java project for testing the project [GeoSmartCity Multilingual Address Geocoding]
 
+![alt tag](https://raw.githubusercontent.com/GeoSmartCity-CIP/gsc-multilingual-address-geocoding-client/master/images/client_image.jpg)
+
 
 ###Status
 
