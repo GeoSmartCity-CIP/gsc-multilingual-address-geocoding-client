@@ -69,7 +69,7 @@
              data: {address:address},
              dataType:"json",
              url:  "http://hub.geosmartcity.eu/geosmartcitygeocoding/resources/MyRestService/getturkuaddress",
-            // url: "http://localhost:8080/Geosmartcity/resources/MyRestService/getturkuaddress",
+             //url: "http://localhost:8080/Geosmartcity/resources/MyRestService/getturkuaddress",
              success: function(results) {
                  //console.log("response:" + results);
                  $("#data").html('');
@@ -88,8 +88,8 @@
                 		if(key=='geometry')
                 			 {
                 			 	var json = $.parseJSON(val); 
-                			 	lon = json.coordinates[0][0];
-           			         	lat = json.coordinates[0][1];
+                			 	lon = json.coordinates[0];
+           			         	lat = json.coordinates[1];
                 			 	items.push([lon,lat]);
                 			 }
                 		if(key=='address')
