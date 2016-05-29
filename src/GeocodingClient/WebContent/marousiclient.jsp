@@ -24,12 +24,12 @@
 <body>
    <div class="container">
       <div class="starter-template">
-<h1>This is a test client for the Turku address REST Service</h1>
+<h1>This is a test client for the Marousi address REST Service</h1>
 <form class="form-horizontal" role="form">
   <div class="form-group">
     <label class="control-label col-sm-2"  for="address">address:</label>
     <div class="col-sm-10">
-    <input type="text" class="form-control" id="address" placeholder="Kannuskatu">
+    <input type="text" class="form-control" id="address" placeholder="Κηφισίας">
     </div>
   </div>
   <div class="form-group"> 
@@ -68,8 +68,8 @@
              type: "GET",
              data: {address:address},
              dataType:"json",
-             url:  "http://hub.geosmartcity.eu/geosmartcitygeocoding/resources/MyRestService/getturkuaddress",
-             //url: "http://localhost:8080/Geosmartcity/resources/MyRestService/getturkuaddress",
+             url:  "http://hub.geosmartcity.eu/MarousiGeocoderServer/geo/RestService/getaddress",
+             //url: "http://localhost:8080/MarousiGeocoderServer/geo/RestService/getaddress",
              success: function(results) {
                  //console.log("response:" + results);
                  $("#data").html('');
@@ -134,6 +134,8 @@
                  
                  
                  map.addLayer(vectorLayer);
+                 var lon = items[0];
+                 var lat = items[1];
                  var test = ol.proj.transform([items[0][0], items[0][1]],'EPSG:4326', 'EPSG:3857');
                  map.getView().setCenter(test);
                  map.getView().setZoom(14);
